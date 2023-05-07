@@ -13,6 +13,14 @@ $ sudo apt install -y gcc make git binutils libc6-dev
 # References
 [Rui Ueyama, "低レイヤを知りたい人のためのCコンパイラ作成入門"](https://www.sigbus.info/compilerbook)
 
+# クローンする場所
+ホームディレクトリ直下
+```
+$HOME/small-c-compiler
+```
+
+クローンする場所を変更したい場合は，``docker-compose.yml``の``volumes``の部分を適切に変更すれば良い．
+
 # Dockerによる環境構築
 ```bash
 $ bash setup.sh
