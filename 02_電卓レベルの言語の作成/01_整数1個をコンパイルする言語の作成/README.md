@@ -9,10 +9,10 @@ $ echo $?
 42
 ```
 
-# 02_simple_cc.c
+# 02_cc.c
 実行例とその結果
 ```bash
-$ gcc 02_simple_cc.c
+$ gcc 02_cc.c
 $ ./a.out 123 > tmp.s
 $ gcc tmp.s
 $ ./a.out
@@ -31,7 +31,7 @@ $ echo $?
 $ make test
 ```
 ```
-cc -std=c11 -g -static    02_simple_cc.c   -o 02_simple_cc
+cc -std=c11 -g -static    02_cc.c   -o 02_cc
 bash test.sh
 0 => 0
 42 => 42
@@ -42,7 +42,7 @@ OK
 $ make clean
 ```
 ```
-rm -f 02_simple_cc tmp*
+rm -f 02_cc tmp*
 ```
 
 
