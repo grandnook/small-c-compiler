@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  
+  ubuntu-compiler:
+    build: ./
+    container_name: ubuntu-compiler
+    hostname: compiler
+    working_dir: /small-c-compiler/
+    restart: always
+    tty: true
+    volumes:
+      - $HOME/small-c-compiler:/small-c-compiler/
+    command: tail -f /dev/null

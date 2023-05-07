@@ -1,0 +1,12 @@
+CFLAGS=-std=c11 -g -static
+SRC=05_main
+
+$(SRC): $(SRC).c
+
+test: $(SRC)
+	./$(SRC)
+
+clean:
+	rm -f $(SRC)
+
+.PHONY: test clean

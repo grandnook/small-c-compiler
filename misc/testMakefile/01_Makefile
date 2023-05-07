@@ -1,0 +1,8 @@
+x:
+	echo "xxx"
+a: c b
+	echo "aaa"
+b:
+	echo "bbb"
+c:
+	echo "ccc"

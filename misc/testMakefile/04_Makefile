@@ -1,0 +1,9 @@
+04_main: 04_main.c
+
+test: 04_main
+	./04_main
+
+clean:
+	rm -f 04_main
+
+.PHONY: test clean

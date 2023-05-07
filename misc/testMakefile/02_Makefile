@@ -1,0 +1,4 @@
+CC=gcc12345
+
+x:
+	echo "xxx $(CC)"

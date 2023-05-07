@@ -1,0 +1,3 @@
+phonyDir:
+	echo "phonyDir"
+.PHONY: phonyDir
