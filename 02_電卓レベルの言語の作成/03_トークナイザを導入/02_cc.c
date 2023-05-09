@@ -3,7 +3,8 @@
 #include <stdarg.h>  // va_start()などに必要
 #include <stdbool.h>  // bool型, true, falseなどに必要
 #include <ctype.h>  // isspace(), isdigit()などに必要
-// #include <string.h>
+
+#define DEBUG 0
 
 typedef enum {
     TK_RESERVED,    // 記号
@@ -115,6 +116,17 @@ int main(int argc, char **argv){
     }
 
     token = tokenize(argv[1]);
+
+#if DEBUG
+    // (e.g.) argv[1] = "456 +  789" などを代入
+    int k = 0;
+    int numArgs = 3;
+    for (k = 0;k<numArgs;k++){
+        printf("%3d, \"%s\"\n", token->val, token->str);
+        token = token->next;
+    }
+    return 0;
+#endif
 
     printf(".intel_syntax noprefix\n");
     printf(".globl main\n");
